@@ -42,4 +42,5 @@ INSERT INTO "books" ("id","callno","name","author","publisher","quantity","issue
  (3,'G@12','Let''s see','Yashwant Kanetkar','BPB',10,0,'2016-07-18 23:02:14'),
  (4,'A@12','asd','asdf','asdfa',1,0,'2020-12-19 05:38:32'),
  (5,'Z@9','english 2nd','none','unknown',5,0,'2020-12-20 16:36:04');
+ 
 COMMIT;
