@@ -1,4 +1,5 @@
 BEGIN TRANSACTION;
+
 CREATE TABLE IF NOT EXISTS "librarian" (
 	"id"	INTEGER,
 	"name"	varchar(100) NOT NULL,
@@ -29,6 +30,7 @@ CREATE TABLE IF NOT EXISTS "books" (
 	"added_date"	timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY("id" AUTOINCREMENT)
 );
+
 INSERT INTO "librarian" ("id","name","password","email","address","city","contact") VALUES (1,'Prabhakar','ppp','prabhakar@gmail.com','javatpoint','noida','9998328238'),
  (2,'sumedh','sumesh','sumesh@gmail.com','Kuch Bhi','noida','93823932823'),
  (3,'abhi','abhi','abhi@gmail.com','javatpoint','noida','92393282323'),
