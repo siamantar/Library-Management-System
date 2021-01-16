@@ -10,7 +10,9 @@ public static boolean checkBook(String bookcallno){
 	    ResultSet rs=ps.executeQuery();
 		status=rs.next();
 		con.close();
-	}catch(Exception e){System.out.println(e);}
+	}catch(Exception e){
+		System.out.println(e);
+	}
 	return status;
 }
 

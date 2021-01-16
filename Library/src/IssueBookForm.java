@@ -72,7 +72,7 @@ public class IssueBookForm extends JFrame {
 		textField_4 = new JTextField();
 		textField_4.setColumns(10);
 		
-		JLabel lblStudentId = new JLabel("Student Id:");
+		JLabel lblStudentId = new JLabel("Student Id(number) :");
 		
 		JLabel lblStudentName = new JLabel("Student Name:");
 		
@@ -91,16 +91,16 @@ public class IssueBookForm extends JFrame {
 			
 			if(IssueBookDao.checkBook(bookcallno)){
 			
-			int i=IssueBookDao.save(bookcallno, studentid, studentname, studentcontact);
-			if(i>0){
-				JOptionPane.showMessageDialog(IssueBookForm.this,"Book issued successfully!");
-				LibrarianSuccess.main(new String[]{});
-				frame.dispose();
+				int i=IssueBookDao.save(bookcallno, studentid, studentname, studentcontact);
+				if(i>0){
+					JOptionPane.showMessageDialog(IssueBookForm.this,"Book issued successfully!");
+					LibrarianSuccess.main(new String[]{});
+					frame.dispose();
+					
+				}else{
+					JOptionPane.showMessageDialog(IssueBookForm.this,"Sorry, unable to issue!");
+				}//end of save if-else
 				
-			}else{
-				JOptionPane.showMessageDialog(IssueBookForm.this,"Sorry, unable to issue!");
-			}//end of save if-else
-			
 			}else{
 				JOptionPane.showMessageDialog(IssueBookForm.this,"Sorry, Callno doesn't exist!");
 			}//end of checkbook if-else

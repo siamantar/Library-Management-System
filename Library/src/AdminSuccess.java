@@ -75,13 +75,14 @@ public class AdminSuccess extends JFrame {
 		btnDeleteLibrarian.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		
 		JButton btnLogout = new JButton("Logout");
+		btnLogout.setBackground(Color.PINK);
 		btnLogout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Library.main(new String[]{});
 				frame.dispose();
 			}
 		});
-		btnLogout.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnLogout.setFont(new Font("Tahoma", Font.BOLD, 15));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)

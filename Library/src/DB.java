@@ -12,7 +12,9 @@ public class DB {
             String url = "jdbc:sqlite:lms.db";
             con = DriverManager.getConnection(url);
             
-		}catch(Exception e){System.out.println(e);}
+		}catch(Exception e){
+			System.out.println(e);
+		}
 		return con;
 	}
 

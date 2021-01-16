@@ -41,7 +41,7 @@ public class ViewBooks extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ViewBooks() {
+	public ViewBooks() { //constructor
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -49,6 +49,7 @@ public class ViewBooks extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
+		//retrieving data from db
 		String data[][]=null;
 		String column[]=null;
 		String sql = "select * from books";
@@ -64,7 +65,7 @@ public class ViewBooks extends JFrame {
 				column[i-1]=rsmd.getColumnName(i);
 			}
 			
-			//get column information
+			//get row information
 			String sql1 = "select count(*) from books";
 			Statement ps1 = con.createStatement();
 			ResultSet rs1 = ps1.executeQuery(sql1);
@@ -92,6 +93,7 @@ public class ViewBooks extends JFrame {
 		        return false;
 		    }
 		};
+		
 		table.setColumnSelectionAllowed(true);
 		JScrollPane sp=new JScrollPane(table);
 		contentPane.add(sp, BorderLayout.CENTER);
